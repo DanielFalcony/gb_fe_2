@@ -26,11 +26,10 @@ def start_registry():
                 exit(0)
             elif program == 'start':
                 add_new_animal_random()
-                print(f'{"-" * 15}\nЖивотные добавлены в реестр!'
-                      f'{show_all()}\n{"-" * 15}')
+                print(f'{"-" * 15}\nЖивотные добавлены в реестр!\n{"-" * 15}')
+                show_all()
             elif program == 'add':
-                start = add_new_animal()
-                all_animals.append(start)
+                add_new_animal()
                 print(f'{"-" * 15}\nЖивотное добавлено в реестр!\n{"-" * 15}')
             elif program == 'show_all':
                 show_all()
@@ -43,6 +42,6 @@ def start_registry():
                     key_type = input('Введите название команды: ')
                     val_type = input('Введите результат команды: ')
                     add_command(id_param, key_type, val_type)
-                    print(f'Команда {key_type} добавлена для животного {all_animals[id_param - 1]}')
+                    print(f'Команда "{key_type}" добавлена для животного - {all_animals[id_param - 1]}')
         except KeyError:
             print('Введено неверное значение, возврат в меню!')
