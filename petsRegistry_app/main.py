@@ -1,12 +1,12 @@
-from user_interface import show_all, add_new_animal, add_command
+from user_interface import start_registry
+import sys
 
+data = sys.stdin.read(start_registry())
 
-i = 0
-while i < 10:
-    add_new_animal()
-    i += 1
+# for i in range(10):
+#    add_new_animal_random()
 
-add_command(5, "Игого", "Что-то Игого")
-add_command(0, "Мяу", "Гав")
-add_command(6, "Трололо", "Уляля")
-print(show_all())
+# add_command(5, "Игого", "Что-то Игого")
+# add_command(1, "Мяу", "Гав")
+# add_command(6, "Трололо", "Уляля")
+# print(show_all())
